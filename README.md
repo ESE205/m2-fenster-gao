@@ -1,8 +1,10 @@
-# ESE205 Module 1
+# ESE205 Module 2
 
-This module concerns setting up the Pi, learning basic bash syntax, and getting an introduction to python.
+This module concerns basic circuitry, basic hardware, python writing to files, GPIO, and I/O.
 
 ## Deliverables
 
-- hello.py
-- module1.py
+- blink.py
+- blink_n_times.py
+- blink_with_write.py
+- data.txt
