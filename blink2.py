@@ -14,7 +14,7 @@ GPIO.setup(LED_PIN, GPIO.OUT, initial=GPIO.LOW)
 with open('data.txt', 'w') as data:
     for i in range(0,ITER_COUNT): # loop through ITER_COUNT times
         GPIO.output(LED_PIN, LED_IS_ON)
-        data.write(f'{time.time()*1000:1.0f} {LED_IS_ON}\n')
+        data.write(f'{time.time():1.0f} {LED_IS_ON}\n')
         if DEBUG:
             print(f'LED is on: {LED_IS_ON}')
         LED_IS_ON = not(LED_IS_ON)
