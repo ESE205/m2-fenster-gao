@@ -4,7 +4,7 @@ This module concerns basic circuitry, basic hardware, python writing to files, G
 
 ## Deliverables
 
-- blink.py
+- program1.py
 - blink_n_times.py
 - blink_with_write.py
 - data.txt
