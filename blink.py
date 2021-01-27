@@ -8,7 +8,7 @@ pin1 = 11
 
 GPIO.setup(pin1, GPIO.OUT, initial=GPIO.LOW)   
 
-hile ITER_COUNT > 0: # Run ITER_COUNT times
+while ITER_COUNT > 0: # Run ITER_COUNT times
    ITER_COUNT -= 1 # Decrement counter
    GPIO.output(pin1, GPIO.HIGH) # Turn on
    sleep(1)                     # Sleep for 1 second
