@@ -19,8 +19,8 @@ GPIO.setup(INPUT_PIN, GPIO.IN) # sets pin as input
 GPIO.setup(LED_PIN, GPIO.OUT, initial=GPIO.LOW) # Sets led pin to output and led to low
 
 # INFINITE LOOP WHERE IF SWITCH IS CONNECTED LED IS ON
-while(x>0):
-    if(GPIO.input(INPUT_PIN)):  GPIO.output(LED_PIN, 1) h
+while True:
+    if(GPIO.input(INPUT_PIN)):  GPIO.output(LED_PIN, 1)
     else: GPIO.output(LED_PIN, 0)
 
 
