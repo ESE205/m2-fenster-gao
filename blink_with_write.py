@@ -36,19 +36,19 @@ t = time.time()+secs
 b = time.time()
 
 # Loop runs for specified amount of time
-while(time.time()<t):
-    if(GPIO.input(INPUT_PIN)):
-        SWITCH_IS_ON = True 
-        if(time.time()%b>blinkrate):
-            i += 1
-            b = time.time()
-            blink()
-    else: SWITCH_IS_ON = False
+with open('data.txt', 'w') as data:
+    while(time.time()<t):
+        if(GPIO.input(INPUT_PIN)):
+            SWITCH_IS_ON = True 
+            if(time.time()%b>blinkrate):
+                i += 1
+                b = time.time()
+                blink()
+        else: SWITCH_IS_ON = False
 
-    if debug:
-        print(f'{time.time():1.0f}\t{i}\t{SWITCH_IS_ON}\n')
-
-    with open('data.txt', 'w') as data:
+        if debug:
+            print(f'{time.time():1.0f}\t{i}\t{SWITCH_IS_ON}\n')
+            
         data.write(f'{time.time():1.0f}\t{SWITCH_IS_ON}\n')
 
 # Turning off pins
